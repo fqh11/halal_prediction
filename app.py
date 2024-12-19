@@ -9,7 +9,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
-UPLOAD_FOLDER = 'static/uploads'  # Store images in the static directory
+UPLOAD_FOLDER = '/tmp/uploads'  # Store images in the static directory
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)  # Ensure the uploads directory exists
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = os.getenv('SECRET_KEY', 'default_secret_key')  # Set a secret key for flashing messages
